@@ -9,7 +9,9 @@ let bird;
 let centercolorval;
 let yellowWarbler;
 let warblerCall;
-let s; 
+let s;
+let birdlist;
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
 function setup() {
   createCanvas(screen.width, screen.height);
@@ -22,6 +24,7 @@ function setup() {
   warblerCall = loadSound("birdcalls/yellow-warbler.mp3")
   centercolorval = 158;
   s = new Audio('./birdcalls/yellow-warbler.mp3');
+  birdlist = loadJSON("bird-profiles.json");
 }
 
 function addBirds(numBirds)
@@ -30,6 +33,27 @@ function addBirds(numBirds)
     myBirds.push(new Bird(random(40,100), random(-200, 5), random(10,50), random(200,650)));
   }
 
+}
+
+function isInSeason(begin, leave, month)
+{
+  currentIndex = months.indexOf(month);
+  return (months.indexOf(begin) <= currentIndex && currentIndex <= months.indexOf(leave));
+}
+function getSeasonalBird(month)
+{
+  let seasonalBirds = [];
+  for (i = 0; i < (birdlist["birds"]).length; i++)
+  {
+    if (isInSeason(birdlist["birds"][i]["begin"], birdlist["birds"][i]["leave"], month))
+    {
+      seasonalBirds.push(birdlist["birds"][i]);
+    }
+  }
+ // console.log(birdlist["birds"][0]);
+  //birdlist.forEach(bird => isInSeason(bird.begin, bird.leave, month)? seasonalBirds.push(bird): {} )
+  console.log(seasonalBirds)
+   return seasonalBirds[int(random(0, seasonalBirds.length))]
 }
 
 function makeInfo() {
@@ -86,7 +110,7 @@ function draw() {
   halfhour = halfhour + 1;
   day = halfhour / 48;
 
-
+console.log(getSeasonalBird("January"));
   if (halfhour % 48 == 0)
   {
 
@@ -246,12 +270,14 @@ class Bird {
       }
     //image(bird, this.posx, this.posy, this.r, this.r)
     circle(this.posx, this.posy, 10);
-    triangle(this.posx, this.posy, this.posx-14, this.posy, this.posx-5, this.posy+30) 
+    triangle(this.posx, this.posy, this.posx-20, this.posy, this.posx-5, this.posy+30) 
+
     triangle(this.posx-5, this.posy+30, this.posx-10, this.posy+35, this.posx-10, this.posy+15) 
     triangle(this.posx-5, this.posy-30, this.posx-10, this.posy-35, this.posx-10, this.posy-15) 
 
 
-    triangle(this.posx, this.posy, this.posx-14, this.posy, this.posx-5, this.posy-30)  
+    triangle(this.posx, this.posy, this.posx-20, this.posy, this.posx-5, this.posy-30)  
+
     triangle(this.posx, this.posy, this.posx-30, this.posy+10, this.posx-30, this.posy-10)  
    
     this.clicked? getCurrentFill() : {};

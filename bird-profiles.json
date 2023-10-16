@@ -1,5 +1,8 @@
 {
-    "yellow-warbler": {
+   
+   "birds" :
+   [ 
+    {
         "name": "Yellow Warbler",
         "species" : "Setophaga petechia",
         "key" : "yellow-warbler",
@@ -7,7 +10,7 @@
         "leave": "October"
     },
 
-    "ash-throated-flycatcher" : {
+     {
         "name" : "Ash-Throated Flycatcher",
         "species":"Myiarchus cinerascens",
         "key": "ash-throated-flycatcher",
@@ -15,7 +18,7 @@
         "leave": "December"
     },
 
-    "barn-swallow": {
+    {
         "name":"Barn Swallow",
         "species": " Hirundo rustica",
         "key": "barn-swallow",
@@ -23,7 +26,7 @@
         "leave": "August"
     },
 
-    "baltimore-oriole": {
+    {
         "name":"Baltiomore Oriole",
         "species": " Hirundo rustica",
         "key": "baltimore-oriole",
@@ -31,7 +34,7 @@
         "leave": "August"
     },
 
-    "red-winged-blackbird": {
+   {
         "name":"Red-winged Blackbird",
         "species": " Hirundo rustica",
         "key": "red-winged-blackbird",
@@ -39,7 +42,7 @@
         "leave": "November"
     },
 
-    "house-wren": {
+   {
         "name":"House Wren",
         "species": " Hirundo rustica",
         "key": "house-wren",
@@ -47,7 +50,7 @@
         "leave": "August"
     },
 
-    "common-yellowthroat": {
+     {
         "name":"Common Yellowthroat",
         "species": " Hirundo rustica",
         "key": "common-yellowthroat",
@@ -55,7 +58,7 @@
         "leave": "November"
     },
 
-    "yellow-rumped-warbler": {
+    {
         "name":"Yellow-Rumped Warbler",
         "species": " Hirundo rustica",
         "key": "yellow-rumped-warbler",
@@ -63,12 +66,109 @@
         "leave": "December"
     },
 
-    "american-redstart": {
+   {
         "name":"American Redstart",
         "species": " Hirundo rustica",
         "key": "american-redstart",
         "begin": "April",
         "leave": "December"
-    }
+    },
 
+    {
+        "name":"Black & White Warbler",
+        "species": " Hirundo rustica",
+        "key": "black-and-white-warbler",
+        "begin": "March",
+        "leave": "November"
+    },
+
+     {
+        "name":"Red-bellied Woodpecker",
+        "species": " Hirundo rustica",
+        "key": "red-bellied-woodpecker",
+        "begin": "January",
+        "leave": "December"
+    },
+
+   {
+        "name":"Hairy Woodpecker",
+        "species": " Hirundo rustica",
+        "key": "hairy-woodpecker",
+        "begin": "January",
+        "leave": "December"
+    },
+
+     {
+        "name":"Northern Flicker",
+        "species": " Hirundo rustica",
+        "key": "northern-flicker",
+        "begin": "January",
+        "leave": "December"
+    },
+  {
+        "name":"Eastern Wood Peewee",
+        "species": " Hirundo rustica",
+        "key": "eastern-wood-peewee",
+        "begin": "April",
+        "leave": "November"
+    },
+    {
+        "name":"Eastern Phoebe",
+        "species": " Hirundo rustica",
+        "key": "eastern-phoebe",
+        "begin": "March",
+        "leave": "December"
+    },
+  {
+        "name":"Eastern Kingbird",
+        "species": " Hirundo rustica",
+        "key": "eastern-kingbird",
+        "begin": "April",
+        "leave": "September"
+    },
+    {
+        "name":"Red-Eyed Vireo",
+        "species": " Hirundo rustica",
+        "key": "red-eyed-vireo",
+        "begin": "April",
+        "leave": "November"
+    },
+   {
+        "name":"Blue Jay",
+        "species": " Hirundo rustica",
+        "key": "blue-jay",
+        "begin": "January",
+        "leave": "December"
+    },
+   {
+        "name":"Black-capped Chickadee",
+        "species": " Hirundo rustica",
+        "key": "chickadee",
+        "begin": "January",
+        "leave": "December"
+    },
+    {
+        "name":"Tufted Titmouse",
+        "species": " Hirundo rustica",
+        "key": "tufted-titmouse",
+        "begin": "January",
+        "leave": "December"
+    },
+     {
+        "name":"Winter Wren",
+        "species": " Hirundo rustica",
+        "key": "tufted-titmouse",
+        "begin": "January",
+        "leave": "May",
+        "begin2": "September",
+        "leave2": "December"
+    },
+    {
+        "name":"Blue-Gray Gnatcatcher",
+        "species": " Hirundo rustica",
+        "key": "blue-gray-gnatcatcher",
+        "begin": "March",
+        "leave": "November"
+    }
+   ]
 }
