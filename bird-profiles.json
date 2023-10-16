@@ -1,0 +1,74 @@
+{
+    "yellow-warbler": {
+        "name": "Yellow Warbler",
+        "species" : "Setophaga petechia",
+        "key" : "yellow-warbler",
+        "begin": "April",
+        "leave": "October"
+    },
+
+    "ash-throated-flycatcher" : {
+        "name" : "Ash-Throated Flycatcher",
+        "species":"Myiarchus cinerascens",
+        "key": "ash-throated-flycatcher",
+        "begin": "November",
+        "leave": "December"
+    },
+
+    "barn-swallow": {
+        "name":"Barn Swallow",
+        "species": " Hirundo rustica",
+        "key": "barn-swallow",
+        "begin": "May",
+        "leave": "August"
+    },
+
+    "baltimore-oriole": {
+        "name":"Baltiomore Oriole",
+        "species": " Hirundo rustica",
+        "key": "baltimore-oriole",
+        "begin": "May",
+        "leave": "August"
+    },
+
+    "red-winged-blackbird": {
+        "name":"Red-winged Blackbird",
+        "species": " Hirundo rustica",
+        "key": "red-winged-blackbird",
+        "begin": "February",
+        "leave": "November"
+    },
+
+    "house-wren": {
+        "name":"House Wren",
+        "species": " Hirundo rustica",
+        "key": "house-wren",
+        "begin": "April",
+        "leave": "August"
+    },
+
+    "common-yellowthroat": {
+        "name":"Common Yellowthroat",
+        "species": " Hirundo rustica",
+        "key": "common-yellowthroat",
+        "begin": "May",
+        "leave": "November"
+    },
+
+    "yellow-rumped-warbler": {
+        "name":"Yellow-Rumped Warbler",
+        "species": " Hirundo rustica",
+        "key": "yellow-rumped-warbler",
+        "begin": "January",
+        "leave": "December"
+    },
+
+    "american-redstart": {
+        "name":"American Redstart",
+        "species": " Hirundo rustica",
+        "key": "american-redstart",
+        "begin": "April",
+        "leave": "December"
+    }
+
+}
