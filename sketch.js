@@ -203,7 +203,7 @@ rect(screen.width*0.65, screen.height*0.3, screen.width*(0.3), screen.height*(0.
 
   let date = new Date(2023, 0);
   date.setDate(day);
-  text("project s.a.f.e flight ", screen.width/10, screen.height/4)
+  text("project safe flight ", screen.width/20, screen.height/5)
 
   text(months[date.getMonth()] + " " + date.getUTCDate(), screen.width*0.77, screen.height*0.75)
   fill(255, centercolorval, centercolorval);
@@ -234,6 +234,7 @@ class Bird {
   r;
   species;
   image;
+  song;
 
   constructor(period, posx, amp, posy, species) {
     this.period = period;//when you want it to reach peak
@@ -247,6 +248,7 @@ class Bird {
     this.clicked = false;
     this.species = species;
     this.image = loadImage("./birdimages/" + species["key"]+".png");
+    this.song = new Audio("./birdcalls/"+ species["key"]+ ".mp3");
     this.name = species["name"];
 
 
@@ -270,11 +272,11 @@ class Bird {
         image(this.image, windowWidth*0.05, windowHeight*0.8, windowHeight*0.2,windowHeight*0.2);
         textSize(windowHeight/30);
         text(this.name,  windowWidth*0.05 + windowHeight*0.25, windowHeight*0.9)
-        s.mozPreservesPitch = false;
-        s.preservesPitch = false;
-        s.volume = 0.2;    // Reduced volume to avoid clipping
+        this.song.mozPreservesPitch = false;
+        this.song.preservesPitch = false;
+        this.song.volume = 0.2;    // Reduced volume to avoid clipping
        // s.playbackRate = this.pitch
-        s.play();
+        this.song.play();
       }
     //image(bird, this.posx, this.posy, this.r, this.r)
     circle(this.posx, this.posy, 10);
