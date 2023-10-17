@@ -23,7 +23,7 @@ function setup() {
   bird = loadImage("bird.png");
   yellowWarbler = loadImage("birdimages/yellow-warbler.png");
   warblerCall = loadSound("birdcalls/yellow-warbler.mp3")
-  centercolorval = 158;
+  centercolorval = 255;
   s = new Audio('./birdcalls/yellow-warbler.mp3');
   birdlist = loadJSON("bird-profiles.json");
   currentMonth = "January";
@@ -141,8 +141,15 @@ if (194 <= day && day < 313)
 
   if (day < 46 || (313 <= day && day < 365))
 {
-  background(65+day*176/46, 70+day*94/46, 122+day*54/46);
 
+  if (day > 46)
+  {
+    background(65+(day-313)*176/46, 70+(day-313)*94/46, 122+(day-313)*54/46);
+  }
+  if (day < 46)
+  {
+    background(65+day*176/46, 70+day*94/46, 122+day*54/46);
+  }
 }
 if (46 <= day && day < 164)
 {
@@ -191,17 +198,17 @@ rect(screen.width*0.65, screen.height*0.3, screen.width*(0.3), screen.height*(0.
   text(firstText, screen.width*0.67, screen.height*0.34)
   text("Click on a bird to hear their call, see them,\n and learn their name.", screen.width/20, screen.height*0.9+25)
 
-  textSize(30);
+  textSize(25);
   //text("project s.a.f.e flight day " + int(day), screen.width/10, screen.height/4)
 
   let date = new Date(2023, 0);
   date.setDate(day);
   text("project s.a.f.e flight ", screen.width/10, screen.height/4)
 
-  text(months[date.getMonth()] + " " + date.getUTCDate(), screen.width*0.75, screen.height*0.75)
-  fill(161, centercolorval, 3);
+  text(months[date.getMonth()] + " " + date.getUTCDate(), screen.width*0.77, screen.height*0.75)
+  fill(255, centercolorval, centercolorval);
   noStroke();
-  text(3500*collisioncount + " birds lost", screen.width*0.85-textWidth(3500*collisioncount + " birds lost")/2, screen.height*0.85);
+  text(3500*collisioncount + " birds lost in New York City", screen.width*0.8-textWidth(3500*collisioncount + " birds lost in New York City")/2, screen.height*0.82);
 
   //green:161 158 3
   //red" 161 8 /3
