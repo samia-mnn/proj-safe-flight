@@ -27,7 +27,7 @@
     },
 
     {
-        "name":"Baltiomore Oriole",
+        "name":"Baltimore Oriole",
         "species": " Hirundo rustica",
         "key": "baltimore-oriole",
         "begin": "May",
@@ -56,14 +56,6 @@
         "key": "common-yellowthroat",
         "begin": "May",
         "leave": "November"
-    },
-
-    {
-        "name":"Yellow-Rumped Warbler",
-        "species": " Hirundo rustica",
-        "key": "yellow-rumped-warbler",
-        "begin": "January",
-        "leave": "December"
     },
 
    {
@@ -106,9 +98,9 @@
         "leave": "December"
     },
   {
-        "name":"Eastern Wood Peewee",
+        "name":"Eastern Wood Pewee",
         "species": " Hirundo rustica",
-        "key": "eastern-wood-peewee",
+        "key": "eastern-wood-pewee",
         "begin": "April",
         "leave": "November"
     },
@@ -119,6 +111,7 @@
         "begin": "March",
         "leave": "December"
     },
+   
   {
         "name":"Eastern Kingbird",
         "species": " Hirundo rustica",
@@ -169,6 +162,56 @@
         "key": "blue-gray-gnatcatcher",
         "begin": "March",
         "leave": "November"
+    },
+    {
+        "name":"Mourning Dove",
+        "species": " Hirundo rustica",
+        "key": "mourning-dove",
+        "begin": "January",
+        "leave": "December"
+    },
+    {
+        "name":"Yellow-Billed Cuckoo",
+        "species": " Hirundo rustica",
+        "key": "yellow-billed-cuckoo",
+        "begin": "May",
+        "leave": "October"
+    },
+    {
+        "name":"Ruby-Throated Hummingbird",
+        "species": " Hirundo rustica",
+        "key": "ruby-throated-hummingbird",
+        "begin": "April",
+        "leave": "October"
+    },
+    {
+        "name":"Semipalmated Plover",
+        "species": " Hirundo rustica",
+        "key": "semipalmated-plover",
+        "begin": "March",
+        "leave": "August"
+    },
+    {
+        "name":"Least Sandpiper",
+        "species": " Hirundo rustica",
+        "key": "least-sandpiper",
+        "begin": "April",
+        "leave": "October"
+    },
+    {
+        "name":"European Starling",
+        "species": " Hirundo rustica",
+        "key": "european-starling",
+        "begin": "January",
+        "leave": "December"
+    },
+    {
+        "name":"Veery",
+        "species": " Hirundo rustica",
+        "key": "veery",
+        "begin": "April",
+        "leave": "October"
     }
+   
    ]
 }

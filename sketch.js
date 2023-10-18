@@ -14,6 +14,14 @@ let birdlist;
 let currentMonth;
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
+
+//Make it so click only one bird
+//once click other bird first bird deselected
+//Birds turn red really early
+//end of year is weird
+//page too tall
+//death count distorted
+//bird call continues 
 function setup() {
   createCanvas(screen.width, screen.height);
   myBirds = [];
@@ -85,7 +93,7 @@ function getCurrentFill() {
 
   if (day < 46 || (313 <= day && day < 365))
 {
-  fill(162+day*(4/46), 199-day*(124/46), 227-day*(98/46));
+  day < 46? fill(162+day*(4/46), 199-day*(124/46), 227-day*(98/46)):fill(162+(day-313)*(4/46), 199-(day-313)*(124/46), 227-(day-313)*(98/46));
 }
 if (46 <= day && day < 164)
 {
@@ -120,7 +128,7 @@ if (day < 46 || (313 <= day && day < 365))
   {
     addBirds(1)
   }
-  fill(162+day*(4/46), 199-day*(124/46), 227-day*(98/46));
+  day < 46? fill(162+day*(4/46), 199-day*(124/46), 227-day*(98/46)):fill(162+(day-313)*(4/46), 199-(day-313)*(124/46), 227-(day-313)*(98/46)) ;
 }
 if (46 <= day && day < 164)
 {
@@ -139,7 +147,7 @@ if (194 <= day && day < 313)
 }
   }
 
-  if (day < 46 || (313 <= day && day < 365))
+  if (day < 46 || (313 <= day ))
 {
 
   if (day > 46)
@@ -167,11 +175,6 @@ if (194 <= day && day < 313)
 
 }
 
-
- //= color(237-day*(237-65)/28, 164-day*(164-70)/28, 176-day*(176-122)/28); //have to go back to map to set the proper background
-  //this is a good spring color
-  //let backgroundColor = backgroundFill;
-  //background(backgroundColor);
   noStroke();
  // circle(30,30,30);
   myBirds.forEach(mybird => {
@@ -199,16 +202,15 @@ rect(screen.width*0.65, screen.height*0.3, screen.width*(0.3), screen.height*(0.
   text("Click on a bird to hear their call, see them,\n and learn their name.", screen.width/20, screen.height*0.9+25)
 
   textSize(25);
-  //text("project s.a.f.e flight day " + int(day), screen.width/10, screen.height/4)
 
   let date = new Date(2023, 0);
   date.setDate(day);
   text("project safe flight ", screen.width/20, screen.height/5)
-
-  text(months[date.getMonth()] + " " + date.getUTCDate(), screen.width*0.77, screen.height*0.75)
+  let dateText = day <= 365? months[date.getMonth()] + " " + date.getUTCDate() : "End of year"
+  text(dateText, screen.width*0.77, screen.height*0.75)
   fill(255, centercolorval, centercolorval);
   noStroke();
-  text(3500*collisioncount + " birds lost in New York City", screen.width*0.8-textWidth(3500*collisioncount + " birds lost in New York City")/2, screen.height*0.82);
+  text(3500*collisioncount + " \nbirds lost in New York City", screen.width*0.85-textWidth(3500*collisioncount + "\nbirds lost in New York City")/2, screen.height*0.82);
 
   //green:161 158 3
   //red" 161 8 /3
@@ -216,7 +218,7 @@ rect(screen.width*0.65, screen.height*0.3, screen.width*(0.3), screen.height*(0.
   getCurrentFill();
 
   currentMonth = months[date.getMonth()]
-  image(skyline, screen.width/3, 3*screen.height/6);
+  image(skyline, screen.width/3, 3.4*screen.height/6, screen.width, screen.height/1.5);
 
 }
 
