@@ -12,6 +12,7 @@ let warblerCall;
 let s;
 let birdlist;
 let currentMonth;
+let currentBirdName;
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
 
@@ -36,6 +37,7 @@ function setup() {
   birdlist = loadJSON("bird-profiles.json");
   currentMonth = "January";
   textFont('Georgia');
+  currentBirdName="";
 }
 
 function addBirds(numBirds)
@@ -201,6 +203,8 @@ rect(screen.width*0.65, screen.height*0.3, screen.width*(0.3), screen.height*(0.
   text(firstText, screen.width*0.67, screen.height*0.34)
   text("Click on a bird to hear their call, see them,\n and learn their name.", screen.width/20, screen.height*0.9+25)
 
+   textSize(windowHeight/30);
+  text(currentBirdName,  windowWidth*0.05 + windowHeight*0.25, windowHeight*0.9)
   textSize(25);
 
   let date = new Date(2023, 0);
@@ -211,7 +215,7 @@ rect(screen.width*0.65, screen.height*0.3, screen.width*(0.3), screen.height*(0.
   fill(255, centercolorval, centercolorval);
   noStroke();
   text(3500*collisioncount + " \nbirds lost in New York City", screen.width*0.85-textWidth(3500*collisioncount + "\nbirds lost in New York City")/2, screen.height*0.82);
-
+ 
   //green:161 158 3
   //red" 161 8 /3
 
@@ -272,8 +276,8 @@ class Bird {
       {
         fill(255);
         image(this.image, windowWidth*0.05, windowHeight*0.8, windowHeight*0.2,windowHeight*0.2);
-        textSize(windowHeight/30);
-        text(this.name,  windowWidth*0.05 + windowHeight*0.25, windowHeight*0.9)
+        
+        currentBirdName = this.name;
         this.song.mozPreservesPitch = false;
         this.song.preservesPitch = false;
         this.song.volume = 0.2;    // Reduced volume to avoid clipping
@@ -302,7 +306,11 @@ class Bird {
     {
       this.posy = this.posyog + this.amp*sin(Math.PI/(2*this.period)*this.posx);
       this.posx = this.posx+this.xvelocity;
-      this.posx > screen.width ? this.clicked = false: {};
+      if (this.posx > screen.width)
+      {
+        this.clicked = false;
+        this.name == currentBirdName? currentBirdName = "" : {};
+      }
     }
 
   }
