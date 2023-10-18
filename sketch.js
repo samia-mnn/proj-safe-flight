@@ -199,7 +199,7 @@ rect(screen.width*0.65, screen.height*0.3, screen.width*(0.3), screen.height*(0.
   }
   noStroke();
   textSize(18);
-  firstText = "Every year, over 9 million birds fly through \n New York City.\n \n However, not all of them complete their\n journey.\n \n Artificial lights and reflective glass pose  \n grave collision risks to many many birds. \n In this simulation, each bird represents\n around 3,500. \n\n As they come in over the year, click on any bird \n to meet the species seasonally navigating our city."
+  firstText = "Every year, over 9 million birds fly through \n New York City.\n \n However, not all of them complete their\n journey.\n \n Artificial lights and glass buildings pose  \n grave collision risks to many many birds. \n In this simulation, each bird represents\n around 3,500. \n\n As they come in over the year, click on any bird \n to meet the species seasonally navigating our city."
   text(firstText, screen.width*0.67, screen.height*0.34)
   text("Click on a bird to hear their call, see them,\n and learn their name.", screen.width/20, screen.height*0.9+25)
 
@@ -209,7 +209,7 @@ rect(screen.width*0.65, screen.height*0.3, screen.width*(0.3), screen.height*(0.
 
   let date = new Date(2023, 0);
   date.setDate(day);
-  text("project safe flight ", screen.width/20, screen.height/5)
+  text("bird-window collisions in nyc", screen.width/20, screen.height/5)
   let dateText = day <= 365? months[date.getMonth()] + " " + date.getUTCDate() : "End of year"
   text(dateText, screen.width*0.77, screen.height*0.75)
   fill(255, centercolorval, centercolorval);
